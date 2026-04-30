@@ -1,0 +1,63 @@
+with open("servers.txt", "w") as f:
+
+Part           		Meaning
+open()       		open a file 
+"servers.txt"		filename
+"w"			    mode — write
+as f			callit f for short
+with			auto close file when done
+
+Python		Bash		Meaning
+"w"		>		write — overwrite
+"a"		>>		append — add to end
+"r"		cat		read file
+
+name = "Sonal"
+
+# Way 1 — comma
+print("Hello", name)
+
+# Way 2 — plus
+print("Hello " + name)
+
+# Way 3 — f-string (best!)
+print(f"Hello {name}")
+
+The f before quotes means:
+"Hey Python — look inside { } 
+and replace variable with its value!"
+name = "Sonal"
+print(f"My name is {name}")
+
+name = "Sonal"      → string (str)
+age = 32            → integer (int)
+is_engineer = True  → boolean (bool)
+
+servers = ["web-server-1", "web-server-2"]  
+list ✅ data type
+
+server = {"name": "web-server-1", "status": "running"}
+dictionary data type
+
+python for DEVOPS
+int and float       Count servers, calculate %      ✅ Must
+str (string)        Server names, file paths        ✅ Must
+bool                True/False checks               ✅ Must
+list                Store multiple servers          ✅ Must — done!
+dict                AWS responses, configs          ✅ Must — done!
+tuple               Fixed data pairs                ⚡ Sometimes
+
+✅ int    → age = 32
+✅ str    → name = "sonal"
+✅ bool   → if True / False
+✅ list   → servers = ["s1", "s2"]
+✅ dict   → server = {"name": "s1"}
+
+
+set -euo pipefail is a safety line for Bash scripts
+-e = Exit on error
+-u = Undefined variable error
+-o pipefail = pipe fail = catch pipe errors
+
+Together = script stops at FIRST sign of problem!
+Like a safety net! 🥅
